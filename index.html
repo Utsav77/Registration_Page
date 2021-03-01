@@ -33,28 +33,34 @@
                         <form name="RegForm" action="/submit.php" onsubmit="return validate()" method="post">
                             <div class="form-group">
                                 <label for="email">EMAIL</label>
-                                <input type="text" class="form-control" id="email" placeholder="Enter email address" name="email" >
+                                <input type="text" class="form-control" onchange="return validate1()" id="email" placeholder="Enter email address" name="email" >
                                 <p id="mail"><p>
                             </div>
                             <div class="form-group">
                                 <label for="uname">USERNAME</label>
-                                <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" >
+                                <input type="text" class="form-control" onchange="return validate1()" id="uname" placeholder="Enter username" name="uname" >
                                 <p id="name"></p>
                             </div>
                             <div class="form-group">
                                 <label for="pwd">PASSWORD</label>
-                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" >
+                                <input type="password" class="form-control" onchange="return validate1()" id="pwd" placeholder="Enter password" name="pswd" >
                                 <p id="pass"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">CONFIRM PASSWORD</label>
+                                <input type="password" class="form-control" onchange="return validate1()" id="cpwd" placeholder="Re-enter password" name="cpswd" >
+                                <p id="cpass"></p>
                             </div>
                             <div class="form-group form-check">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="checkbox" name="remember" >I accept Terms and Conditions
+                                    <input class="form-check-input" type="checkbox" onchange="return validate1()" name="remember" >
+                                    <p id="tnc"> I accept Terms and Conditions </p>
                                 </label>
                                 <p id="check"></p>
                             </div>
                             <div class="form-group loginbttm">
                                 <div class="login-btm login-button">
-                                    <button type="submit" class="btn btn-outline-primary">REGISTER</button>
+                                    <button type="submit" class="btn btn-outline-primary btn-sm">REGISTER</button>
                                 </div>
                             </div>
                         </form>
